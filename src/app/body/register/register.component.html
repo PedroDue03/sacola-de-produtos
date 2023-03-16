@@ -1,0 +1,89 @@
+<section>
+  <form [formGroup]="form" class="grid">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      pInputText
+    >
+    <label for="Email">Email</label>
+    <input
+      id="Email"
+      type="text"
+      formControlName="email"
+      placeholder="ex: name@email.com..."
+      pInputText
+    >
+
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="text"
+      formControlName="password"
+      pInputText
+    >
+
+    <label for="confirmPassword">Confirm Password</label>
+    <input
+      id="confirmPassword"
+      type="text"
+      formControlName="confirmPassword"
+      placeholder="Rewrite your password..."
+      pInputText
+    >
+
+    <label for="birth">Birth</label>
+    <input
+      id="birth"
+      type="text"
+      formControlName="birth"
+      pInputText
+    >
+
+    <label for="cep">Cep</label>
+    <input
+      id="cep"
+      type="text"
+      formControlName="cep"
+      placeholder="ex: 12345678..."
+      pInputText
+    >
+
+    <label for="city">City</label>
+    <input
+      id="city"
+      type="text"
+      formControlName="city"
+      pInputText
+    >
+
+    <label for="state">State</label>
+    <input
+      id="state"
+      type="text"
+      formControlName="state"
+      placeholder="Ex: AL"
+      pInputText
+    >
+
+    <label for="houseNumber">Houser Number</label>
+    <input
+      id="houseNumber"
+      type="text"
+      formControlName="houseNumber"
+      pInputText
+    >
+
+    <label for="complement">Complement</label>
+    <input
+      id="complement"
+      type="text"
+      formControlName="complement"
+      pInputText
+    >
+
+    <button pButton type="button" label="Click" (click)="register()">Cadastrar</button>
+
+  </form>
+</section>
