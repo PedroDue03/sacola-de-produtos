@@ -10,7 +10,11 @@ export class ListProductsComponent {
   constructor(private router: Router) {
   }
 
-  redireciona() {
+  redirectToRegister() {
   this.router.navigate(['register'])
+  }
+
+  redirectToLogin() {
+    this.router.navigate(['login'])
   }
 }

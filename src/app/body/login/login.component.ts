@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      name: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
@@ -29,5 +29,13 @@ export class LoginComponent implements OnInit {
       //verifica no banco se 'user' existe e se sim, redireciona para 'list-products' ,senão invalida form.
       this.router.navigate(['list-products'])
     }
+  }
+
+  redirectToRegister() {
+    this.router.navigate(['register'])
+  }
+
+  redirectToHome() {
+    this.router.navigate(['list-product'])
   }
 }

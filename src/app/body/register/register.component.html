@@ -1,89 +1,130 @@
-<section>
-  <form [formGroup]="form" class="grid">
-    <label for="name">Name</label>
-    <input
-      id="name"
-      type="text"
-      formControlName="name"
-      pInputText
-    >
-    <label for="Email">Email</label>
-    <input
-      id="Email"
-      type="text"
-      formControlName="email"
-      placeholder="ex: name@email.com..."
-      pInputText
-    >
+<section class="container">
+  <div class="content">
+    <form [formGroup]="formUser" class="formUser">
+      <h3>Dados pessoais</h3>
+      <div class="grid p-fluid">
+        <div class="col-6">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="name"
+              id="name"
+              pInputText
+            >
+            <label for="name">User name</label>
+          </span>
+          </div>
+        </div>
 
-    <label for="password">Password</label>
-    <input
-      id="password"
-      type="text"
-      formControlName="password"
-      pInputText
-    >
+        <div class="col-6">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="email"
+              id="email"
+              pInputText
+            >
+            <label for="email">Email</label>
+          </span>
+          </div>
+        </div>
 
-    <label for="confirmPassword">Confirm Password</label>
-    <input
-      id="confirmPassword"
-      type="text"
-      formControlName="confirmPassword"
-      placeholder="Rewrite your password..."
-      pInputText
-    >
+        <div class="col-6">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="password"
+              id="password"
+              pInputText
+            >
+            <label for="password">Password</label>
+          </span>
+          </div>
+        </div>
 
-    <label for="birth">Birth</label>
-    <input
-      id="birth"
-      type="text"
-      formControlName="birth"
-      pInputText
-    >
+        <div class="col-6">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="password"
+              id="confirmPassword"
+              pInputText
+            >
+            <label for="confirmPassword">Confirm your password</label>
+          </span>
+          </div>
+        </div>
+      </div>
+    </form>
 
-    <label for="cep">Cep</label>
-    <input
-      id="cep"
-      type="text"
-      formControlName="cep"
-      placeholder="ex: 12345678..."
-      pInputText
-    >
 
-    <label for="city">City</label>
-    <input
-      id="city"
-      type="text"
-      formControlName="city"
-      pInputText
-    >
+    <form [formGroup]="formAddressUser" class="formAddressUser">
+      <h3>Endereço</h3>
+      <div class="grid p-fluid">
 
-    <label for="state">State</label>
-    <input
-      id="state"
-      type="text"
-      formControlName="state"
-      placeholder="Ex: AL"
-      pInputText
-    >
+        <div class="col-6">
+          <div class="p-inputgroup input">
+         <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="cep"
+              id="cep"
+              pInputText
+              (focusout)="cep()"
+            >
+            <label for="cep">CEP</label>
+          </span>
+          </div>
+        </div>
 
-    <label for="houseNumber">Houser Number</label>
-    <input
-      id="houseNumber"
-      type="text"
-      formControlName="houseNumber"
-      pInputText
-    >
+        <div class="col-6">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="state"
+              id="state"
+              pInputText
+            >
+            <label for="state">State</label>
+          </span>
+          </div>
+        </div>
 
-    <label for="complement">Complement</label>
-    <input
-      id="complement"
-      type="text"
-      formControlName="complement"
-      pInputText
-    >
+        <div class="col-9">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="complement"
+              id="complement"
+              pInputText
+            >
+            <label for="complement">Complement</label>
+          </span>
+          </div>
+        </div>
 
-    <button pButton type="button" label="Click" (click)="register()">Cadastrar</button>
+        <div class="col-3">
+          <div class="p-inputgroup input">
+          <span class="p-float-label">
+            <input
+              type="text"
+              formControlName="houseNumber"
+              id="houseNumber"
+              pInputText
+            >
+            <label for="houseNumber">House number</label>
+          </span>
+          </div>
+        </div>
 
-  </form>
+      </div>
+    </form>
+    <p-button label="Register" (click)="register()"></p-button>
+  </div>
 </section>
