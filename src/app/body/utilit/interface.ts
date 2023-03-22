@@ -8,5 +8,8 @@ export interface User {
   state: string,
   houseNumber: string,
   complement: string,
+}
+
+export interface Product {
 
 }

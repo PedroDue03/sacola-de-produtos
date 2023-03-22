@@ -8,22 +8,22 @@ import {User} from "../interface";
 })
 export class ApiService {
 
-  private api = 'http://localhost:3000/'
+  private api = 'http://localhost:3500/'
 
   constructor(private http: HttpClient) {}
     criar(newUser: User): Observable<User> {
-      return this.http.post<User>(this.api + 'register', newUser)
+      return this.http.post<User>(this.api + 'user/register', newUser)
     };
 
-    // listar(): Observable<User[]> {
-    //   return this.http.get<User[]>(this.api).pipe(
+    // list(): Observable<Product[]> {
+    //   return this.http.get<Product[]>(this.api).pipe(
     //     catchError(err => {
     //       return of(err)
     //     })
     //   )
     // };
 
-    // editar(user: User): Observable<User> {
+    // edit(user: User): Observable<User> {
     //   const url = `${this.api}/${funcionario.id}`
     //   return this.http.put<User>(url, funcionario).pipe(
     //     catchError(err => {
@@ -32,7 +32,7 @@ export class ApiService {
     //   )
     // };
 
-    // deletar(id: User): Observable<User> {
+    // delete(id: User): Observable<User> {
     //   const url = `${this.api}/${id}`
     //   return this.http.delete<User>(url)
     // }

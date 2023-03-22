@@ -7,13 +7,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./list-products.component.scss']
 })
 export class ListProductsComponent {
-  constructor(private router: Router) {
-  }
+  constructor(
+    private router: Router,
+  ) { }
 
   redirectToRegister() {
-  this.router.navigate(['register'])
+    this.router.navigate(['register'])
   }
-
   redirectToLogin() {
     this.router.navigate(['login'])
   }

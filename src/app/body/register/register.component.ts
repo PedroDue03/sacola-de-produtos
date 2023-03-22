@@ -40,14 +40,14 @@ export class RegisterComponent implements OnInit {
   cep() {
     const cep = this.formAddressUser.controls['cep'].value
 
-    if(cep != null && cep !== '') {
-      this.cepService.queryCep(cep).subscribe( (enderecoCep:any)=> {
+    if (cep != null && cep !== '') {
+      this.cepService.queryCep(cep).subscribe((enderecoCep: any) => {
         console.log(enderecoCep)
 
-        if(enderecoCep?.erro) {
-          this.formAddressUser.controls['cep'].setErrors({msg:'O número de CEP não foi encontrado ou não existe.'})
-        }else {
-          const {localidade, logradouro, bairro, uf} = enderecoCep
+        if (enderecoCep?.erro) {
+          this.formAddressUser.controls['cep'].setErrors({msg: 'O número de CEP não foi encontrado ou não existe.'})
+        } else {
+          const {localidade, uf, logradouro, bairro} = enderecoCep
           this.formAddressUser.controls['state'].setValue(`${localidade}, ${uf}`)
           this.formAddressUser.controls['complement'].setValue(`${logradouro}, ${bairro}`)
         }
@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit {
       //     complement: this.formAddressUser.value.complement,
       //   }
       //
-      //   this.api-service.criar(newUser).subscribe(newUser => {
+      //   this.api-service.create(newUser).subscribe(newUser => {
       //     if (!newUser) {
       //       console.log('Campos inválidados')
       //     } else {
@@ -81,7 +81,7 @@ export class RegisterComponent implements OnInit {
       // }
       this.router.navigate(['list-product'])
     } else {
-    console.log("form " + this.formUser.status)
+      console.log("form " + this.formUser.status)
     }
   }
 }

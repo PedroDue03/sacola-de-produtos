@@ -1,4 +1,10 @@
-.product {
-  width: 5px;
-  height: 5px;
+.container {
+
+  header {
+    background: black;
+    .title {
+      color: beige;
+    }
+  }
 }
+

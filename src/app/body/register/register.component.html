@@ -61,7 +61,6 @@
       </div>
     </form>
 
-
     <form [formGroup]="formAddressUser" class="formAddressUser">
       <h3>Endereço</h3>
       <div class="grid p-fluid">
@@ -125,6 +124,7 @@
 
       </div>
     </form>
-    <p-button label="Register" (click)="register()"></p-button>
+    <p-button label="Cadastrar" (click)="register()"></p-button>
+    <h5>Caso já tenha acesso, <a [routerLink]="['/login']">entre</a></h5>
   </div>
 </section>
