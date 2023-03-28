@@ -1,11 +1,11 @@
 <section class="container">
-  <header><h1>Dué Shopping</h1></header>
-  <div class="content">
-    <form [formGroup]="form" class="formUser">
+  <p-card>
+    <div class="content">
       <h3>Login</h3>
-      <div class="grid p-fluid">
-        <div class="col-12">
-          <div class="p-inputgroup input">
+      <form [formGroup]="form" class="formUser">
+        <div class="grid p-fluid">
+          <div class="col-12">
+            <div class="p-inputgroup input">
           <span class="p-float-label">
             <input
               type="text"
@@ -15,11 +15,10 @@
             >
             <label for="email">Email</label>
           </span>
+            </div>
           </div>
-        </div>
-
-        <div class="col-12">
-          <div class="p-inputgroup input">
+          <div class="col-12">
+            <div class="p-inputgroup input">
           <span class="p-float-label">
             <input
               type="text"
@@ -29,12 +28,13 @@
             >
             <label for="password">Password</label>
           </span>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
-    <p-button label="login" class="button" (click)="redirectToHome()"></p-button>
-    <h5>Caso não tenha acesso, <a [routerLink]="['/register']">cadastre-se</a></h5>
-<!--    <p-button label="Register" (click)="redirectToRegister()"></p-button>-->
-  </div>
+      </form>
+      <p-button label="login" class="button" (click)="redirectToHome()"></p-button>
+      <h5>Caso não tenha acesso, <a [routerLink]="['/register']">cadastre-se</a></h5>
+      <!--    <p-button label="Register" (click)="redirectToRegister()"></p-button>-->
+    </div>
+  </p-card>
 </section>

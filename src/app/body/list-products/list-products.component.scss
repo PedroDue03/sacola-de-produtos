@@ -1,10 +1,35 @@
-.container {
+section {
+  margin: 0;
+  .header {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-height: 20vw;
+    display: flex;
+    align-items: center;
+    background-color: black;
 
-  header {
-    background: black;
     .title {
-      color: beige;
+      color: white;
+    }
+
+    .redirect {
+      display: flex;
+      justify-content: flex-end;
+
+      .button_login {
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .list_product {
+    margin: 0;
+    min-height: 100vh;
+    background-color: gray;
+
+    .product {
+      height: 50vh;
     }
   }
 }
-

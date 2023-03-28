@@ -31,11 +31,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  redirectToRegister() {
-    this.router.navigate(['register'])
-  }
-
   redirectToHome() {
-    this.router.navigate(['list-product'])
+    this.router.navigate(['/list-product'])
   }
 }

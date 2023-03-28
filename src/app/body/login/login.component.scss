@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -9,16 +9,9 @@
 
 
   .content {
-    max-width: 60vw;
-    margin: 1rem;
-    padding: 1rem;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    border-radius: 1em;
-    border-color: indigo;
-    background: antiquewhite;
 
     .input {
       margin-bottom: 5px;
@@ -34,5 +27,5 @@ h3 {
   color: indigo;
   font-weight: bold;
   text-align: center;
-  margin: 2rem 0;
+  margin-bottom: 1rem;
 }

@@ -8,11 +8,11 @@ import {User} from "../interface";
 })
 export class ApiService {
 
-  private api = 'http://localhost:3500/'
+  private api = 'http://localhost:3500'
 
   constructor(private http: HttpClient) {}
-    criar(newUser: User): Observable<User> {
-      return this.http.post<User>(this.api + 'user/register', newUser)
+    create(newUser: User): Observable<User> {
+      return this.http.post<User>(this.api + '/user/register', newUser)
     };
 
     // list(): Observable<Product[]> {
