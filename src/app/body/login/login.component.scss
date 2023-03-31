@@ -1,11 +1,13 @@
 .container {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: snow;
+
 
 
   .content {

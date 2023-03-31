@@ -21,6 +21,12 @@ import {ToastModule} from "primeng/toast";
 import {AppRoutingModule} from './app-routing.module';
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
+import { MenuComponent } from './menu/menu.component';
+import {MultiSelectModule} from "primeng/multiselect";
+import { HomeComponent } from './home/home.component';
+import {RatingModule} from "primeng/rating";
+import {CascadeSelectModule} from "primeng/cascadeselect";
+import {TreeSelectModule} from "primeng/treeselect";
 
 @NgModule({
     declarations: [
@@ -31,21 +37,27 @@ import {InputTextModule} from "primeng/inputtext";
         LoginComponent,
         ListProductsComponent,
         BagComponent,
-        ProductComponent
+        ProductComponent,
+        MenuComponent,
+        HomeComponent
     ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        InputTextModule,
-        ButtonModule,
-        HttpClientModule,
-        RouterModule,
-        CardModule,
-        ToastModule,
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    ButtonModule,
+    HttpClientModule,
+    RouterModule,
+    CardModule,
+    ToastModule,
+    MultiSelectModule,
+    RatingModule,
+    CascadeSelectModule,
+    TreeSelectModule,
+  ],
     providers: [
         HttpClient,
         ApiService,

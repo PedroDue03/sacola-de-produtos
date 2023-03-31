@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
 
     this.formAddressUser = this.fb.group({
       cep: ['', Validators.maxLength(8)],
-      state: ['', [Validators.required]],
+      city: ['', [Validators.required]],
       complement: ['', Validators.required],
       houseNumber: ['', [Validators.required, Validators.minLength(1)]]
     })
@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
           this.formAddressUser.controls['cep'].setErrors({msg: 'O número de CEP não foi encontrado ou não existe.'})
         } else {
           const {localidade, uf, logradouro, bairro} = enderecoCep
-          this.formAddressUser.controls['state'].setValue(`${localidade}, ${uf}`)
+          this.formAddressUser.controls['city'].setValue(`${localidade}, ${uf}`)
           this.formAddressUser.controls['complement'].setValue(`${logradouro}, ${bairro}`)
         }
       })
