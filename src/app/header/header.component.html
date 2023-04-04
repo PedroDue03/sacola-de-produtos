@@ -9,8 +9,21 @@
         </div>
         <div class="col-6">
           <div class="buttons_header">
-            <p-button class="button_register" label="Cadastre-se" (click)="redirectToRegister()"></p-button>
-            <p-button class="button_login" label="Entre" (click)="redirectToLogin()"></p-button>
+            <p-button
+              class="button_register"
+              icon="pi pi-shopping-cart"
+              (click)="redirectToBag()">
+            </p-button>
+            <p-button
+              class="button_register"
+              label="Cadastre-se"
+              (click)="redirectToRegister()">
+            </p-button>
+            <p-button
+              class="button_login"
+              label="Entre"
+              (click)="redirectToLogin()">
+            </p-button>
           </div>
         </div>
       </div>

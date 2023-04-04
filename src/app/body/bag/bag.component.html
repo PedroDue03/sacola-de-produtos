@@ -1,1 +1,60 @@
-<p>bag works!</p>
+<p-card class="card_master">
+  <div class="container">
+    <div class="header">
+      <div class="grid">
+        <div class="home_page">
+          <div class="col-12">
+            <h1 [routerLink]="['/home']">Home</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p-card>
+      <div class="bag">
+        <div class="grid">
+          <div class="title_bag col-12">
+            <h3>Carrinho de compras</h3>
+          </div>
+          <hr>
+          <div class="list_product">
+            <div class="col-12">
+              <div class="grid">
+                <div class="product">
+                  <div class="confirm_product col-1">
+                    <p-checkbox
+                      [(ngModel)]="checked"
+                      [binary]="true"
+                      inputId="binary"
+                    ></p-checkbox>
+                  </div>
+                  <div class="image col-2">
+                    <!--            <img src="{{img_product_select}}" alt="">-->
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9NZWUYLVbaPLXK592whe_y_h01qrwAYgSsA&usqp=CAU"
+                      alt="bola">
+                  </div>
+                  <div class="description_img col-3">
+                    <!--                <p>{{product.description}}</p>-->
+                    <p>Bola Penalty modelo 2000 liga da Rússia</p>
+                  </div>
+                  <div class="price col-3">
+                    <h3>R$: 54,99</h3>
+                    <!--              {{product.price}}-->
+                  </div>
+                  <div class="amount col-3">
+                    <p-inputNumber
+                      inputId="minmax-buttons"
+                      [(ngModel)]="product"
+                      [showButtons]="true"
+                      [min]="0"
+                    ></p-inputNumber>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</p-card>

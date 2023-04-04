@@ -9,8 +9,11 @@ import {Router} from "@angular/router";
 export class HeaderComponent {
   constructor(private router: Router) { }
 
+  redirectToBag() {
+    this.router.navigate(['bag'])
+  }
   redirectToRegister() {
-    this.router.navigate(['/register'])
+    this.router.navigate(['register'])
   }
   redirectToLogin() {
     this.router.navigate(['login'])

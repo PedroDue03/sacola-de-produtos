@@ -27,6 +27,8 @@ import { HomeComponent } from './home/home.component';
 import {RatingModule} from "primeng/rating";
 import {CascadeSelectModule} from "primeng/cascadeselect";
 import {TreeSelectModule} from "primeng/treeselect";
+import {InputNumberModule} from "primeng/inputnumber";
+import {CheckboxModule} from "primeng/checkbox";
 
 @NgModule({
     declarations: [
@@ -57,6 +59,8 @@ import {TreeSelectModule} from "primeng/treeselect";
     RatingModule,
     CascadeSelectModule,
     TreeSelectModule,
+    InputNumberModule,
+    CheckboxModule,
   ],
     providers: [
         HttpClient,

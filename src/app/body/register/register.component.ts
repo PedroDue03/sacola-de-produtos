@@ -95,6 +95,6 @@ export class RegisterComponent implements OnInit {
   }
 
   redirectListProduct() {
-    this.router.navigate(['list-product'])
+    this.router.navigate(['home'])
   }
 }
